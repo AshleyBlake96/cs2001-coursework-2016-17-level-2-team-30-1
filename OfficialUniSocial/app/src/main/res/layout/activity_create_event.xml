@@ -86,5 +86,23 @@
         android:inputType="date"
         android:maxLength="8"/>
 
+    <TextView
+        android:id="@+id/Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:text="Location:"
+        android:textStyle="bold"
+        android:layout_below="@+id/Date"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Date"
+        android:inputType="textCapSentences"
+        android:maxLength="20"/>
 
 </RelativeLayout>
