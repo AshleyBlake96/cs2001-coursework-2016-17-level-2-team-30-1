@@ -46,5 +46,25 @@
         android:inputType="textCapSentences"
         android:maxLength="25"/>
 
+    <TextView
+        android:id="@+id/Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:text="Time:"
+        android:textStyle="bold"
+        android:layout_below="@+id/Host"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Host"
+        android:hint=" : "
+        android:inputType="time"
+        android:maxLength="5" />
+
 
 </RelativeLayout>
