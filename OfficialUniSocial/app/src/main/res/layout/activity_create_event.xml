@@ -66,5 +66,25 @@
         android:inputType="time"
         android:maxLength="5" />
 
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:text="Date:"
+        android:textStyle="bold"
+        android:layout_below="@+id/Time"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Time"
+        android:hint="DD.MM.YY"
+        android:inputType="date"
+        android:maxLength="8"/>
+
 
 </RelativeLayout>
