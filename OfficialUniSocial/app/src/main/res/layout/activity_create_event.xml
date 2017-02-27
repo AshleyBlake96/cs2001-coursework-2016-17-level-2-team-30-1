@@ -105,4 +105,24 @@
         android:inputType="textCapSentences"
         android:maxLength="20"/>
 
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="60dp"
+        android:text="Description:"
+        android:textStyle="bold"
+        android:layout_below="@+id/Location"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Location"
+        android:layout_marginTop="24dp"
+        android:inputType="textMultiLine"
+        android:maxLength="60"/>
+
 </RelativeLayout>
