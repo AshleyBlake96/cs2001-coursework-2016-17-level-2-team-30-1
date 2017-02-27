@@ -125,4 +125,21 @@
         android:inputType="textMultiLine"
         android:maxLength="60"/>
 
+    <TextView
+        android:id="@+id/No_of_Students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Number of Students:"
+        android:textStyle="bold"
+        android:layout_below="@+id/Description"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Description"
+        android:inputType="number"
+        android:maxLength="3"/>
 </RelativeLayout>
