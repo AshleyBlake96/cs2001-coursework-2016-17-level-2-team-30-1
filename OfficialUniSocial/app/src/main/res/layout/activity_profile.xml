@@ -219,3 +219,33 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/goooogleee"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University"
+                android:textColor="#a2a1b8"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="left"
+                />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/goooglggeee"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Brunel University"
+                android:textColorHint="#181737"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="right"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
