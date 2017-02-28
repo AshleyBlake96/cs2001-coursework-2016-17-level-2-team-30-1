@@ -104,3 +104,29 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/mail"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="#a2a1b8"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="left"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/maill"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#1b193b"
+                android:hint="mehdi@gmail.com"
+                android:textColor="#181737"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="right"
+                />
