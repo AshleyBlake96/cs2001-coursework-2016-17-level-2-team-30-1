@@ -78,3 +78,19 @@
                 android:padding="16dp"
                 android:gravity="left"
                 />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/ususr"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mehdi Jaber"
+                android:textColorHint="#181737"
+                android:textColor="#181737"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="right"
+                />
+        </LinearLayout>
