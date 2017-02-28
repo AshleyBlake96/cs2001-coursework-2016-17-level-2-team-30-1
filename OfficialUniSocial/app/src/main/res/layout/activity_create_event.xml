@@ -27,11 +27,6 @@
         android:inputType="textCapSentences"
         android:maxLength="30"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Title"/>
 
     <TextView
         android:id="@+id/Host"
@@ -51,12 +46,6 @@
         android:layout_below="@+id/Title"
         android:inputType="textCapSentences"
         android:maxLength="25"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Host"/>
 
     <TextView
         android:id="@+id/Time"
@@ -78,12 +67,6 @@
         android:inputType="time"
         android:maxLength="5" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Time"/>
-
     <TextView
         android:id="@+id/Date"
         android:layout_width="wrap_content"
@@ -104,12 +87,6 @@
         android:inputType="date"
         android:maxLength="8"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Date"/>
-
     <TextView
         android:id="@+id/Location"
         android:layout_width="wrap_content"
@@ -128,12 +105,6 @@
         android:layout_below="@id/Date"
         android:inputType="textCapSentences"
         android:maxLength="20"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Location"/>
 
     <TextView
         android:id="@+id/Description"
@@ -154,12 +125,6 @@
         android:layout_marginTop="24dp"
         android:inputType="textMultiLine"
         android:maxLength="60"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#4E4B4F"
-        android:layout_below="@id/Description"/>
 
     <TextView
         android:id="@+id/No_of_Students"
