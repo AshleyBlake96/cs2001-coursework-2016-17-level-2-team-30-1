@@ -78,6 +78,12 @@
         android:inputType="time"
         android:maxLength="5" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Time"/>
+
     <TextView
         android:id="@+id/Date"
         android:layout_width="wrap_content"
@@ -97,6 +103,12 @@
         android:hint="DD.MM.YY"
         android:inputType="date"
         android:maxLength="8"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Date"/>
 
     <TextView
         android:id="@+id/Location"
