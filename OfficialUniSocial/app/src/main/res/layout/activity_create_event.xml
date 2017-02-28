@@ -129,6 +129,12 @@
         android:inputType="textCapSentences"
         android:maxLength="20"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Location"/>
+
     <TextView
         android:id="@+id/Description"
         android:layout_width="wrap_content"
@@ -148,6 +154,12 @@
         android:layout_marginTop="24dp"
         android:inputType="textMultiLine"
         android:maxLength="60"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Description"/>
 
     <TextView
         android:id="@+id/No_of_Students"
