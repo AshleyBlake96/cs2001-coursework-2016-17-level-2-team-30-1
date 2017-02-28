@@ -12,6 +12,54 @@
     android:gravity="top"
     tools:context="com.example.ronke.eventinfo.MainActivity"
 
+<TextView
+android:text="[Event Title]"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/textView"
+android:textSize="30sp"
+tools:textColor="#000000"
+android:layout_marginBottom="10dp"
+android:layout_marginTop="10dp" />
 
+<TextView
+android:text="[Event host name]"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/textView5"
+android:textSize="25sp"
+tools:textColor="#000000"
+android:layout_marginBottom="10dp"
+android:layout_marginTop="10dp" />
+
+<TextView
+android:text="[Date]"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/textView2"
+android:textSize="20sp"
+tools:textColor="#000000"
+android:layout_marginTop="10dp"
+android:layout_marginBottom="10dp" />
+
+<TextView
+android:text="[Time]"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/textView3"
+android:textSize="20sp"
+tools:textColor="#000000"
+android:layout_marginBottom="10dp"
+android:layout_marginTop="10dp" />
+
+<TextView
+android:text="[Event info....................]"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/textView4"
+android:textSize="20sp"
+tools:textColor="#000000"
+android:layout_marginTop="10dp"
+android:layout_marginBottom="10dp" />
 
 </LinearLayout>
