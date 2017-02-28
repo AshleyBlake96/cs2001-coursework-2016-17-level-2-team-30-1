@@ -27,6 +27,12 @@
         android:inputType="textCapSentences"
         android:maxLength="30"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Title"/>
+
     <TextView
         android:id="@+id/Host"
         android:layout_width="wrap_content"
@@ -45,6 +51,12 @@
         android:layout_below="@+id/Title"
         android:inputType="textCapSentences"
         android:maxLength="25"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4E4B4F"
+        android:layout_below="@id/Host"/>
 
     <TextView
         android:id="@+id/Time"
