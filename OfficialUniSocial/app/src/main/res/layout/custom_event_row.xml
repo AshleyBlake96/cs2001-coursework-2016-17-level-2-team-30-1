@@ -36,6 +36,30 @@
             android:textColor="@android:color/black"
             android:layout_below="@+id/event_title_id"/>
 
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_date_id"
+            android:text="Date"
+            android:textSize="13sp"
+            android:layout_toRightOf="@+id/event_image_id"
+            android:layout_below="@+id/event_info_id"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_location_id"
+            android:text="Location"
+            android:textSize="13sp"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/event_info_id"
+            android:layout_alignParentEnd="true"
+            />
+
+
 
 
     </RelativeLayout>
