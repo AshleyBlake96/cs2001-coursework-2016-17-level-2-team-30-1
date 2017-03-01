@@ -40,7 +40,12 @@
         android:layout_alignRight="@+id/send_message_button_id"
         android:layout_alignEnd="@+id/send_message_button_id">
 
-        
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/chat_id" />
 
 
     </ScrollView>
