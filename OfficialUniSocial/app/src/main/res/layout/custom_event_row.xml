@@ -26,7 +26,17 @@
             android:layout_toRightOf="@+id/event_image_id"
             />
 
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="65dp"
+            android:id="@+id/event_info_id"
+            android:text="1nfo"
+            android:textSize="13sp"
+            android:layout_toRightOf="@+id/event_image_id"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/event_title_id"/>
+
+
+
     </RelativeLayout>
-
-
 </LinearLayout>
