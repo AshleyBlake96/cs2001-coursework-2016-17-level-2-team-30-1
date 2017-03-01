@@ -29,6 +29,21 @@
         android:layout_toLeftOf="@+id/send_message_button_id"
         android:layout_toStartOf="@+id/send_message_button_id" />
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/send_message_button_id"
+        android:layout_alignRight="@+id/send_message_button_id"
+        android:layout_alignEnd="@+id/send_message_button_id">
+
+        
+
+
+    </ScrollView>
 
 
 </RelativeLayout>
