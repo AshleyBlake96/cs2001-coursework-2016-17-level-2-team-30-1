@@ -30,9 +30,8 @@
 
     <EditText
         android:id="@+id/Title_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="320sp"
+        android:layout_height="40sp"
         android:inputType="textCapSentences"
         android:maxLength="30"/>
 
@@ -47,9 +46,8 @@
 
     <EditText
         android:id="@+id/Host_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="320sp"
+        android:layout_height="40sp"
         android:layout_below="@+id/Title"
         android:inputType="textCapSentences"
         android:maxLength="25"/>
@@ -65,9 +63,8 @@
 
     <EditText
         android:id="@+id/Time_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="60sp"
+        android:layout_height="40sp"
         android:layout_below="@id/Host"
         android:hint=" : "
         android:inputType="time"
@@ -84,9 +81,8 @@
 
     <EditText
         android:id="@+id/Date_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="100sp"
+        android:layout_height="40sp"
         android:layout_below="@id/Time"
         android:hint="DD.MM.YY"
         android:inputType="date"
@@ -103,9 +99,8 @@
 
     <EditText
         android:id="@+id/Location_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="320sp"
+        android:layout_height="40sp"
         android:layout_below="@id/Date"
         android:inputType="textCapSentences"
         android:maxLength="20"/>
@@ -121,9 +116,8 @@
 
     <EditText
         android:id="@+id/Description_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="320sp"
+        android:layout_height="40sp"
         android:layout_below="@id/Location"
         android:layout_marginTop="24dp"
         android:inputType="textMultiLine"
@@ -140,9 +134,8 @@
 
     <EditText
         android:id="@+id/No_of_students_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
         android:layout_below="@id/Description"
         android:inputType="number"
         android:maxLength="3"/>
