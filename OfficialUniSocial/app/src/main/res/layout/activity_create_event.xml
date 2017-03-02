@@ -19,6 +19,26 @@
          android:layout_marginBottom="10dp"
          android:background="@android:drawable/picture_frame"/>
 
+     <Button
+         android:id="@+id/BrowseImage_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@id/imagebox"
+         android:layout_marginBottom="60dp"
+         android:layout_marginLeft="10dp"
+         android:onClick=""
+         android:text="Browse Image" />
+
+     <Button
+         android:id="@+id/UploadImage_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@id/imagebox"
+         android:layout_below="@id/BrowseImage_button"
+         android:layout_marginLeft="10dp"
+         android:onClick=""
+         android:text="Upload Image" />
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
