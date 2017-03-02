@@ -54,4 +54,31 @@
         android:background="@android:color/transparent"
         android:textColor="#FFFFFF"
         android:id="@+id/Username_editText_id"/>
+
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Password"
+        android:textSize="22sp"
+        android:layout_below="@id/Username_editText_id"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="22dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:id="@+id/Password_text_id"/>
+
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Password_text_id"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:background="@android:color/transparent"
+        android:inputType="text"
+        android:textSize="22sp"
+        android:password="true"
+        android:hint="********"
+        android:textColor="#FFFFFF"
+        android:id="@+id/Password_editText_id" />
 </RelativeLayout>
