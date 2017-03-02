@@ -1,17 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_register"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="64dp"
-    android:paddingRight="64dp"
-    android:paddingTop="16dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:gravity="top"
-    tools:context="com.example.ronke.eventinfo.MainActivity"
+    tools:context="com.app.groupproject.officialunisocial.ActivityPages.RegisterActivity"
 
+    android:weightSum="1">
+
+    <TextView
+        android:text="Sign up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="40sp"
+        tools:textColor="#3333FF"/>
+
+    <TextView
+        android:text="string/untext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        tools:textColor="@android:color/black">
+    </TextView>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/users_un"
+        android:hint="enter username"
+        android:textAlignment="textStart"
+        android:textSize="20sp"/>
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Press to change"-->
+    <!--android:id="@+id/change_button"/>-->
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textView"
+        android:textColor="#000000" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:hint="enter password"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:ems="10"
+        android:id="@+id/editText" />
+
+    <TextView
+        android:text="Re enter password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:hint="re enter password"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:ems="10"
+        android:id="@+id/editText2" />
+
+    <TextView
+        android:text="Please select your university of study:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textView3"
+        android:textColor="#000000"/>
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/spinner"
+        />
+
+    <TextView
+        android:text="University email address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/textView4"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="email address"
+        android:textSize="20sp"
+        android:ems="10"
+        android:id="@+id/editText3" />
+
+    <Button
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:id="@+id/button2"
+        android:layout_marginBottom="10dp"
+        />
 
 
 </LinearLayout>
+

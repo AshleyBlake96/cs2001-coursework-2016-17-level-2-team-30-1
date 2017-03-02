@@ -10,12 +10,11 @@
         >
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/backgrd"
             android:scaleType="centerCrop"
             android:layout_marginBottom="25dp"
             />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,13 +32,10 @@
                     android:orientation="vertical"
                     android:layout_marginBottom="20dp"
                     >
+
+
                 </LinearLayout>
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/user"
-                    android:gravity="bottom"
-                    />
+
                 <LinearLayout
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -49,7 +45,6 @@
                     >
 
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
@@ -58,84 +53,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true">z
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
-
             <TextView
                 android:layout_weight="1"
-                android:id="@+id/usrusr"
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Name"
-                android:textColor="#a2a1b8"
-                android:maxLength="12"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="left"
-                />
-
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/ususr"
+                android:id="@+id/fullName"
                 android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Mehdi Jaber"
-                android:textColorHint="#181737"
-                android:textColor="#181737"
+                android:text="Name :"
+                android:textColor="#a2a1b8"
                 android:maxLength="12"
                 android:background="#0000"
-                android:padding="16dp"
-                android:gravity="right"
+                android:padding="16sp"
+                android:gravity="left"
                 />
-        </LinearLayout>
 
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1sp"
             android:background="#dad8d8"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+
             <TextView
                 android:layout_weight="1"
-                android:id="@+id/mail"
+                android:id="@+id/Username"
                 android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="Username :"
                 android:textColor="#a2a1b8"
                 android:maxLength="12"
                 android:background="#0000"
-                android:padding="16dp"
+                android:padding="20sp"
                 android:gravity="left"/>
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/maill"
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#1b193b"
-                android:hint="mehdi@gmail.com"
-                android:textColor="#181737"
-                android:maxLength="12"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="right"
-                />
+
 
         </LinearLayout>
-        />
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1sp"
             android:background="#dad8d8"/>
 
         <LinearLayout
@@ -143,39 +109,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+
             <TextView
                 android:layout_weight="1"
-                android:id="@+id/pswrd"
-                android:textSize="16dp"
+                android:id="@+id/email"
+                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Password"
+                android:text="E-Mail :"
                 android:textColor="#a2a1b8"
                 android:maxLength="12"
                 android:background="#0000"
-                android:padding="16dp"
+                android:padding="20sp"
                 android:gravity="left"
                 />
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/pswrdd"
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#1b193b"
-                android:inputType="textPassword"
-                android:hint="**********"
-                android:textColor="#181737"
-                android:maxLength="12"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="right"
-                />
-        </LinearLayout>
 
+
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1sp"
             android:background="#dad8d8"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -184,38 +137,90 @@
             >
             <TextView
                 android:layout_weight="1"
-                android:id="@+id/fbook"
-                android:textSize="16dp"
+                android:id="@+id/gender"
+                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Age"
+                android:text="Gender :"
                 android:textColor="#a2a1b8"
                 android:maxLength="12"
                 android:background="#0000"
-                android:padding="16dp"
+                android:padding="20sp"
                 android:gravity="left"
                 />
-            <TextView
-                android:layout_weight="1"
-                android:id="@+id/maill2"
-                android:textSize="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#1b193b"
-                android:hint="20"
-                android:textColor="#181737"
-                android:maxLength="12"
-                android:background="#0000"
-                android:padding="16dp"
-                android:gravity="right"
-                />
+
         </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1sp"
             android:background="#dad8d8" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/age"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age :"
+                android:textColor="#a2a1b8"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="20sp"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#dad8d8" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/university"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University :"
+                android:textColor="#a2a1b8"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="20sp"
+                android:gravity="left"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#dad8d8" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/numPhone"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number :"
+                android:textColor="#a2a1b8"
+                android:maxLength="12"
+                android:background="#0000"
+                android:padding="20sp"
+                android:gravity="left"
+                />
+>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
