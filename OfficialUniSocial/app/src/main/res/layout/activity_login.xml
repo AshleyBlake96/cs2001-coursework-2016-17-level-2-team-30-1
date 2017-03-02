@@ -9,9 +9,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.app.groupproject.officialunisocial.ActivityPages.LoginActivity">
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="buttonn"
-    />
+    <View
+        android:layout_width="400dp"
+        android:layout_height="650dp"
+        android:background="#ffffff"
+        android:id="@+id/Background_textView_id"/>
 </RelativeLayout>
