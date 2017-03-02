@@ -30,4 +30,28 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="350dp"
         android:background="@drawable/Rectangle"/>
+    <TextView
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Username"
+        android:textSize="22sp"
+        android:layout_marginTop="255dp"
+        android:layout_marginLeft="22dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:id="@+id/Username_text_id"/>
+
+    <EditText
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Username_text_id"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="10dp"
+        android:hint="Ashley"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:textSize="22sp"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"
+        android:id="@+id/Username_editText_id"/>
 </RelativeLayout>
