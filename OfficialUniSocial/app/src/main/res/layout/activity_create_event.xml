@@ -46,12 +46,12 @@
         android:layout_below="@id/imagebox"
         android:text="Title:"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Title_field"
-        android:layout_width="320sp"
-        android:layout_height="40sp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:layout_below="@id/Title"
         android:inputType="textCapSentences"
         android:maxLength="30"/>
@@ -63,12 +63,12 @@
         android:layout_below="@+id/Title_field"
         android:text="Host:"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Host_field"
-        android:layout_width="320sp"
-        android:layout_height="40sp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/Host"
         android:inputType="textCapSentences"
         android:maxLength="25"/>
@@ -80,12 +80,12 @@
         android:text="Time:"
         android:textStyle="bold"
         android:layout_below="@+id/Host_field"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Time_field"
-        android:layout_width="60sp"
-        android:layout_height="40sp"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:layout_below="@id/Time"
         android:hint=" : "
         android:inputType="time"
@@ -98,12 +98,12 @@
         android:text="Date:"
         android:textStyle="bold"
         android:layout_below="@+id/Time_field"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Date_field"
-        android:layout_width="100sp"
-        android:layout_height="40sp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_below="@id/Date"
         android:hint="DD.MM.YY"
         android:inputType="date"
@@ -116,12 +116,12 @@
         android:text="Location:"
         android:textStyle="bold"
         android:layout_below="@+id/Date_field"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Location_field"
-        android:layout_width="320sp"
-        android:layout_height="40sp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:layout_below="@id/Location"
         android:inputType="textCapSentences"
         android:maxLength="20"/>
@@ -133,12 +133,12 @@
         android:text="Description:"
         android:textStyle="bold"
         android:layout_below="@+id/Location_field"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/Description_field"
-        android:layout_width="320sp"
-        android:layout_height="40sp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:layout_below="@id/Description"
         android:layout_marginTop="24dp"
         android:inputType="textMultiLine"
@@ -151,12 +151,12 @@
         android:text="Number of Students:"
         android:textStyle="bold"
         android:layout_below="@+id/Description_field"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/No_of_students_field"
-        android:layout_width="40sp"
-        android:layout_height="40sp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_below="@id/No_of_Students"
         android:inputType="number"
         android:maxLength="3"/>
