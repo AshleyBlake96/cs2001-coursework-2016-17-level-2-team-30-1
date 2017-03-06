@@ -1,5 +1,7 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
+import android.content.Intent;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +19,8 @@ public class RegisterActivity extends AppCompatActivity {
     private ImageView profileImg;
     private UserData registerData = new UserData();
     private EditText[] textField = new EditText[8];
+    private static final int PICK_IMAGE = 11;
+
 
 
     @Override
@@ -68,4 +72,10 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
+
+    private void openGallery() {
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, PICK_IMAGE);
+    }
+
 }
