@@ -114,6 +114,15 @@ public class RegisterActivity extends AppCompatActivity {
             //gets Uri of the chosen image
             Uri imageFileUri = data.getData();
 
+            CropImage.activity(imageFileUri)
+                    .setGuidelines(CropImageView.Guidelines.OFF)
+                    .setFixAspectRatio(true)
+                    .setAspectRatio(1,1)
+                    .setActivityTitle("Crop Profile Image")
+                    .setBackgroundColor(Color.parseColor("#86FF0004"))
+                    .setBorderCornerColor(Color.WHITE)
+                    .setBorderLineColor(Color.parseColor("#0191e4"))
+                    .start(this);
 
         }
 
