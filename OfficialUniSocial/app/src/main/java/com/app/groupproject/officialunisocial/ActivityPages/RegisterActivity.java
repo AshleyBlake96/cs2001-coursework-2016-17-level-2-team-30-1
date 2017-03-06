@@ -38,7 +38,8 @@ public class RegisterActivity extends AppCompatActivity {
         //Initialising database reference for where user info will be stored
         dbRef = FirebaseDatabase.getInstance().getReference().child("Users");
 
-
+        //Initialising database reference for where the useres profile pics willl be stored
+        storageRef = FirebaseStorage.getInstance().getReference();
 
 
         //TextField for user information
