@@ -35,6 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
         //Initialising Authentication database
         fAuth = FirebaseAuth.getInstance();
 
+        //Initialising database reference for where user info will be stored
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Users");
+
 
 
 
