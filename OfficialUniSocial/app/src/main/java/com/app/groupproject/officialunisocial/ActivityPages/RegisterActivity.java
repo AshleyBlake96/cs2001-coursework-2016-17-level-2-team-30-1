@@ -1,9 +1,13 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +18,10 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.app.groupproject.officialunisocial.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -21,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
     private UserData registerData = new UserData();
     private EditText[] textField = new EditText[8];
     private static final int PICK_IMAGE = 11;
+    private String STRdownloadURI;
+
 
 
     private FirebaseAuth fAuth;
@@ -102,6 +112,69 @@ public class RegisterActivity extends AppCompatActivity {
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
+            //gets Uri of the chosen image
+            Uri imageFileUri = data.getData();
+
+            CropImage.activity(imageFileUri)
+                    .setGuidelines(CropImageView.Guidelines.OFF)
+                    .setFixAspectRatio(true)
+                    .setAspectRatio(1,1)
+                    .setActivityTitle("Crop Profile Image")
+                    .setBackgroundColor(Color.parseColor("#86FF0004"))
+                    .setBorderCornerColor(Color.WHITE)
+                    .setBorderLineColor(Color.parseColor("#0191e4"))
+                    .start(this);
+
+        }
+
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            //gets cropimage result
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+
+            if (resultCode == RESULT_OK) {
+                Uri resultUri = result.getUri();
+
+                profileImg.setImageURI(resultUri);
+
+                StorageReference filePath = storageRef.child("Profile Image").child(SCMethods.textToString(textField[0]) + resultUri.getLastPathSegment());
+
+
+                filePath.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                        Uri downloadUri = taskSnapshot.getDownloadUrl();
+                        STRdownloadURI = downloadUri.toString();
+
+                        Log.d("D_Value---------------",STRdownloadURI);
+
+
+                        Toast.makeText(RegisterActivity.this, "Upload Successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
+
+            }
+
+
+        } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+            Exception error = result.getError();
+        }
+
+
     }
 
 }
