@@ -127,6 +127,9 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            //gets cropimage result
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+
 
         }
 
