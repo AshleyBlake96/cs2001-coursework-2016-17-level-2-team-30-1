@@ -33,3 +33,10 @@ dependencies {
 
 }
 apply plugin: 'com.google.gms.google-services'
+
+allprojects {
+    buildDir = "C:/tmp/${rootProject.name}/${project.name}"
+    repositories {
+
+    }
+}
