@@ -104,4 +104,11 @@ public class RegisterActivity extends AppCompatActivity {
         startActivityForResult(gallery, PICK_IMAGE);
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+    }
+
 }
