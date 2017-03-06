@@ -29,6 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
     private UserData registerData = new UserData();
     private EditText[] textField = new EditText[8];
     private static final int PICK_IMAGE = 11;
+    private String STRdownloadURI;
+
 
 
     private FirebaseAuth fAuth;
@@ -143,6 +145,25 @@ public class RegisterActivity extends AppCompatActivity {
 
                 StorageReference filePath = storageRef.child("Profile Image").child(SCMethods.textToString(textField[0]) + resultUri.getLastPathSegment());
 
+
+                filePath.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                        Uri downloadUri = taskSnapshot.getDownloadUrl();
+                        STRdownloadURI = downloadUri.toString();
+
+                        Log.d("D_Value---------------",STRdownloadURI);
+
+
+                        Toast.makeText(RegisterActivity.this, "Upload Successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
 
 
 
