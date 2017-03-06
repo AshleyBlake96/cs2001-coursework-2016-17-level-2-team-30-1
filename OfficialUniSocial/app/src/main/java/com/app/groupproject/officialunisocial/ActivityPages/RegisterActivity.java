@@ -32,6 +32,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //Initialising Authentication database
+        fAuth = FirebaseAuth.getInstance();
+
 
 
 
