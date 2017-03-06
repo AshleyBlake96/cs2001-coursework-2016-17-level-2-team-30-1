@@ -1,6 +1,8 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -107,6 +109,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
+            //gets Uri of the chosen image
+            Uri imageFileUri = data.getData();
+
+
+        }
 
 
     }
