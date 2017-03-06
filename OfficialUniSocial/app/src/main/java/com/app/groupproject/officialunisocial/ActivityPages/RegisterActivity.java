@@ -130,6 +130,11 @@ public class RegisterActivity extends AppCompatActivity {
             //gets cropimage result
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
 
+            if (resultCode == RESULT_OK) {
+
+
+            }
+
 
         }
 
