@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.app.groupproject.officialunisocial.R;
 
@@ -50,6 +51,21 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Added a spinner to give users an option between male and female
         Spinner genderOptions = (Spinner) findViewById(R.id.gender_options_id);
+
+        //making the browser button open the gallery when pressed
+        browserImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(SCMethods.textToString(textField[1]).equals("")) {
+                    Toast.makeText(RegisterActivity.this, "Fill in Username Field", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    openGallery();
+                }
+            }
+        });
+
 
 
         //added array adapter which gets the string array values which the user choses from
