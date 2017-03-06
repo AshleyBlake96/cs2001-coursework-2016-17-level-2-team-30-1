@@ -131,6 +131,9 @@ public class RegisterActivity extends AppCompatActivity {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
 
             if (resultCode == RESULT_OK) {
+                Uri resultUri = result.getUri();
+
+                profileImg.setImageURI(resultUri);
 
 
             }
