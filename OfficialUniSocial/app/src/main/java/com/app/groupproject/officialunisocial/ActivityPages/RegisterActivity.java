@@ -126,6 +126,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         }
 
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+
+        }
+
 
     }
 
