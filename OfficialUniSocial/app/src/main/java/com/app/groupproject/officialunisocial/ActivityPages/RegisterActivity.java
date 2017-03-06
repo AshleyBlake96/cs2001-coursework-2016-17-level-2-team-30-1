@@ -2,6 +2,8 @@ package com.app.groupproject.officialunisocial.ActivityPages;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +15,7 @@ import com.app.groupproject.officialunisocial.R;
 public class RegisterActivity extends AppCompatActivity {
 
     private ImageView profileImg;
+    private UserData registerData = new UserData();
     private EditText[] textField = new EditText[8];
 
 
@@ -20,6 +23,9 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+
 
         //TextField for user information
         textField[0] = (EditText) findViewById(R.id.fullName_field_id);
@@ -45,6 +51,21 @@ public class RegisterActivity extends AppCompatActivity {
         //added array adapter which gets the string array values which the user choses from
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.gender_array,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //Spinner adding adapter for the male/female selection and storing it in the UserData Information
+        genderOptions.setAdapter(adapter);
+        genderOptions.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                registerData.setGender(parent.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
     }
 }
