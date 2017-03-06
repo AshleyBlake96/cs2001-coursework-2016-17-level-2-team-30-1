@@ -23,6 +23,9 @@ public class RegisterActivity extends AppCompatActivity {
     private static final int PICK_IMAGE = 11;
 
 
+    private FirebaseAuth fAuth;
+    private DatabaseReference dbRef;
+    private StorageReference storageRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
