@@ -23,13 +23,23 @@ public class RegisterActivity extends AppCompatActivity {
     private static final int PICK_IMAGE = 11;
 
 
+    private FirebaseAuth fAuth;
+    private DatabaseReference dbRef;
+    private StorageReference storageRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //Initialising Authentication database
+        fAuth = FirebaseAuth.getInstance();
 
+        //Initialising database reference for where user info will be stored
+        dbRef = FirebaseDatabase.getInstance().getReference().child("Users");
+
+        //Initialising database reference for where the useres profile pics willl be stored
+        storageRef = FirebaseStorage.getInstance().getReference();
 
 
         //TextField for user information
