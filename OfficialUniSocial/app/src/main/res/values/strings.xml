@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UniSocial</string>
+
+    <string-array name="gender_array">
+        <item>Select your gender</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+
 </resources>
