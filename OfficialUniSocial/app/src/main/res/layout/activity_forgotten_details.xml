@@ -15,4 +15,14 @@
         android:layout_height="650dp"
         android:background="#156381"
         android:id="@+id/Background_textView_id"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Email"
+        android:textSize="22sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="250dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/Email_text_id"/>
 </RelativeLayout>
