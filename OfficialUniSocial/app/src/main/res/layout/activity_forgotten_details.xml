@@ -36,4 +36,15 @@
         android:layout_marginTop="170dp"
         android:textColor="#FFFFFF"
         android:id="@+id/Information_text_id"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/Email_text_id"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="240dp"
+        android:inputType="text"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/Email_editText_id" />
 </RelativeLayout>
