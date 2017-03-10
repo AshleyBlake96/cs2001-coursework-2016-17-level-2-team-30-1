@@ -56,7 +56,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="40dp"
         android:layout_below="@id/Information_text_id"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:id="@+id/Email_text_id"/>
 
     <EditText
