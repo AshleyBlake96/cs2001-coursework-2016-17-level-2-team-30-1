@@ -85,16 +85,18 @@
         android:layout_marginTop="443dp"
         android:textAllCaps="false"
         android:id="@+id/Back_button_id"/>
+    
     <Button
-        android:layout_width="193dp"
+        android:layout_width="168dp"
         android:layout_height="wrap_content"
         android:text="@string/linkToEmail"
         android:layout_toRightOf="@+id/Back_button_id"
-        android:background="#a9a9a9"
+        android:background="@drawable/rectangle"
         android:textSize="20sp"
+        android:layout_marginLeft="4dp"
         android:textAllCaps="false"
         android:textAlignment="center"
-        android:layout_marginTop="463dp"
+        android:layout_marginTop="443dp"
         android:id="@+id/linkToEmail_button_id" />
 
     <TextView
