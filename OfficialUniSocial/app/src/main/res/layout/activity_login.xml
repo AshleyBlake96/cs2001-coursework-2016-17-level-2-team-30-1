@@ -95,15 +95,15 @@
         android:id="@+id/forgottenPassword_button_id"/>
 
     <Button
-        android:layout_width="168dp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:text="@string/signIn"
-        android:layout_toRightOf="@+id/forgottenPassword_button_id"
-        android:layout_marginLeft="4dp"
+        android:text="@string/ForgottenDetails"
+        android:layout_below="@id/Register_button_id"
+        android:id="@+id/ForgottenPassword_button_id"
         android:background="@drawable/rectangle"
-        android:textSize="20sp"
-        android:textAllCaps="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
-        android:layout_marginTop="463dp"
-        android:id="@+id/signIn_button_id"/>
+        android:textSize="16sp"
+        android:textAllCaps="false"/>
 </RelativeLayout>
