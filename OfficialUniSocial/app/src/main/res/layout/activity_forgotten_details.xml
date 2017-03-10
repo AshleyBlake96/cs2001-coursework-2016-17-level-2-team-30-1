@@ -60,15 +60,19 @@
         android:id="@+id/Email_text_id"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/Email_text_id"
+        android:layout_below="@+id/Email_text_id"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="240dp"
+        android:hint="1522919@my.burnel.ac.uk"
+        android:layout_marginTop="10dp"
         android:inputType="text"
-        android:textSize="22sp"
+        android:background="@android:color/transparent"
+        android:textAlignment="center"
+        android:textSize="20sp"
         android:textColor="#FFFFFF"
         android:id="@+id/Email_editText_id" />
+
 
     <Button
         android:layout_width="193dp"
