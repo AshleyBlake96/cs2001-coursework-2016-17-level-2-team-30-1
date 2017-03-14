@@ -25,6 +25,16 @@
         android:layout_margin="5dp"
         android:textAllCaps="false"
         />
- 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/dark_blue"
+        android:scaleType="centerCrop"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/navColour_id" />
 
 </RelativeLayout>
