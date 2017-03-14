@@ -53,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true">z
+        android:layout_alignParentBottom="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +72,12 @@
                 android:padding="16sp"
                 android:gravity="left"
                 />
-
+            <EditText
+                android:id="@+id/NameInput"
+                android:layout_width="122sp"
+                android:layout_height="match_parent"
+                android:hint="Input Name"
+                android:inputType="text" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -97,7 +102,12 @@
                 android:padding="20sp"
                 android:gravity="left"/>
 
-
+            <EditText
+                android:id="@+id/UserInput"
+                android:layout_width="122sp"
+                android:layout_height="match_parent"
+                android:hint="Input User"
+                android:inputType="text" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -124,7 +134,12 @@
                 android:gravity="left"
                 />
 
-
+            <EditText
+                android:id="@+id/EmailInput"
+                android:layout_width="122sp"
+                android:layout_height="match_parent"
+                android:hint="Input E-Mail"
+                android:inputType="text" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -148,7 +163,12 @@
                 android:padding="20sp"
                 android:gravity="left"
                 />
-
+            <EditText
+                android:id="@+id/GenderInput"
+                android:layout_width="122sp"
+                android:layout_height="match_parent"
+                android:hint="Input Gender"
+                android:inputType="text" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -172,7 +192,12 @@
                 android:padding="20sp"
                 android:gravity="left"
                 />
-
+            <EditText
+                android:id="@+id/AgeInput"
+                android:layout_width="122sp"
+                android:layout_height="wrap_content"
+                android:hint="Input Age"
+                android:inputType="phone" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -196,7 +221,12 @@
                 android:padding="20sp"
                 android:gravity="left"
                 />
-
+            <EditText
+                android:id="@+id/universityInput"
+                android:layout_width="122sp"
+                android:layout_height="match_parent"
+                android:hint="Input Uni"
+                android:inputType="text" />
         </LinearLayout>
         <View
             android:layout_width="match_parent"
@@ -220,7 +250,12 @@
                 android:padding="20sp"
                 android:gravity="left"
                 />
->
+            <EditText
+                android:id="@+id/numInput"
+                android:layout_width="122sp"
+                android:layout_height="wrap_content"
+                android:hint="Input Num"
+                android:inputType="phone" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
