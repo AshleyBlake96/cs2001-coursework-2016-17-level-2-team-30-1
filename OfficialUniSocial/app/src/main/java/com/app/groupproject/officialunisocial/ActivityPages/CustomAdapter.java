@@ -55,10 +55,15 @@ public class CustomAdapter extends BaseAdapter {
         TextView date = (TextView) convertView.findViewById(R.id.event_date_id);
         ImageView eventImage = (ImageView) convertView.findViewById(R.id.event_image_id);
 
-
         final EventData singleEventData = (EventData) this.getItem(position);
 
+        title.setText(singleEventData.getTitle());
+        desc.setText(singleEventData.getDescription());
+        location.setText(singleEventData.getLocation());
+        date.setText(singleEventData.getDate());
+        Picasso.with(context).load(singleEventData.getImage()).into(eventImage);
 
+        notifyDataSetChanged();
 
         return convertView;
     }
