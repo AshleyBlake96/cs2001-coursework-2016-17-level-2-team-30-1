@@ -116,10 +116,19 @@ public class EventListActivity extends AppCompatActivity {
 
         //Instead of an inner class I call a anonymous interclass
         databaseRef.child("Events").addValueEventListener(new ValueEventListener() {
+
+            /*
+            This method will be invoked any time the data on the database changes.
+            Additionally, it will be invoked as soon as we connect the listener,
+            so that we can get an initial snapshot of the data on the database.
+            */
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                //ctrl alt v Creates the correct data type to store it in
+                //Iterable gets all of the children at this level
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();
 
+                //shake hands with each of them and save it as a variable (Child)
                 for(DataSnapshot child: children) {
                     EventData event = child.getValue(EventData.class);
                     eventList.add(event);
