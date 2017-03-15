@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.app.groupproject.officialunisocial.EventData;
@@ -39,6 +40,15 @@ public class EventListActivity extends AppCompatActivity {
         NavigationView navView = (NavigationView) findViewById(R.id.nav_view_id);
         View headerView = navView.getHeaderView(0);
 
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+
+
+            }
+
+
+        });
 
 
     }
