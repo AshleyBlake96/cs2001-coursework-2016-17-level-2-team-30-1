@@ -82,8 +82,9 @@ public class UserData {
         return uniqueID;
     }
 
-    public void setUniqueID(String uniqueID) {
-        this.uniqueID = uniqueID;
+    public void setUniqueID(String unID) {
+        this.uniqueID = unID;
     }
+
 
 }
