@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.app.groupproject.officialunisocial.EventData;
 
@@ -47,6 +49,14 @@ public class CustomAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.custom_event_row, parent, false);
         }
 
+        TextView title = (TextView) convertView.findViewById(R.id.event_title_id);
+        TextView desc = (TextView) convertView.findViewById(R.id.event_info_id);
+        TextView location = (TextView) convertView.findViewById(R.id.event_location_id);
+        TextView date = (TextView) convertView.findViewById(R.id.event_date_id);
+        ImageView eventImage = (ImageView) convertView.findViewById(R.id.event_image_id);
+
+
+        final EventData singleEventData = (EventData) this.getItem(position);
 
 
 
