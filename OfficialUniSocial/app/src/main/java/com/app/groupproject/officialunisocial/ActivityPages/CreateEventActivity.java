@@ -49,7 +49,27 @@ public class CreateEventActivity extends AppCompatActivity {
         });
 
 
+        Button submitButton = (Button) findViewById(R.id.Submit_button);
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eventDetails[1] = (EditText) findViewById(R.id.Description_field_id);
+                eventDetails[2] = (EditText) findViewById(R.id.Host_field_id);
+                eventDetails[3] = (EditText) findViewById(R.id.Location_field_id);
+                eventDetails[4] = (EditText) findViewById(R.id.No_of_students_field_id);
+                eventDetails[5] = (EditText) findViewById(R.id.Date_field_id);
+                eventDetails[6] = (EditText) findViewById(R.id.Time_field_id);
+                ImageView image = (ImageView) findViewById(R.id.imageview_id);
+
+
+
+            }
+        });
     }
+
+
+
 
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
