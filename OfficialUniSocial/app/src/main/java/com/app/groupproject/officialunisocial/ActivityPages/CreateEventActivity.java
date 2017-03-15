@@ -85,6 +85,12 @@ public class CreateEventActivity extends AppCompatActivity {
                     addChildAndValue(titleRef, "time", textToString(eventDetails[6]));
                     addChildAndValue(titleRef, "image",STRdownloadURI);
 
+                    Intent userInfo = getIntent();
+                    UserData userData = (UserData) userInfo.getExtras().get("userInfo");
+                    Intent intent = new Intent(CreateEventActivity.this,EventListActivity.class);
+                    intent.putExtra("userInfo",userData);
+                    startActivity(intent);
+                    finish();
                 }
 
 
