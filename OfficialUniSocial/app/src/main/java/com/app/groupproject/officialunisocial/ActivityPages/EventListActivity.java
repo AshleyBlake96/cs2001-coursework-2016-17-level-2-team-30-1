@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -145,6 +146,19 @@ public class EventListActivity extends AppCompatActivity {
 
             }
         });
+
+        ImageButton addBtn = (ImageButton) findViewById(R.id.addBtn_id);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addIntent = new Intent(EventListActivity.this,CreateEventActivity.class);
+                addIntent.putExtra("userInfo",userInfo);
+                startActivity(addIntent);
+                finish();
+            }
+        });
+
+
 
     }
 }
