@@ -138,6 +138,13 @@ public class RegisterActivity extends AppCompatActivity {
         }
         else {
 
+            String strEmail = SCMethods.textToString(textField[2]);
+            String strPassword = SCMethods.textToString(textField[3]);
+            String strRePassword = SCMethods.textToString(textField[4]);
+
+            if(!strPassword.equals(strRePassword)){
+                Toast.makeText(RegisterActivity.this, "Password Doesn't Match", Toast.LENGTH_SHORT).show();
+            }
         }
 
 
