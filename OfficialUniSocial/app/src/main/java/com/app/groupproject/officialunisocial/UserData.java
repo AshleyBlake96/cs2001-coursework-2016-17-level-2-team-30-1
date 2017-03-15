@@ -1,4 +1,4 @@
-package com.app.groupproject.officialunisocial.ActivityPages;
+package com.app.groupproject.officialunisocial;
 
 /**
  * Created by Jey on 15/03/2017.
@@ -82,8 +82,9 @@ public class UserData {
         return uniqueID;
     }
 
-    public void setUniqueID(String uniqueID) {
-        this.uniqueID = uniqueID;
+    public void setUniqueID(String unID) {
+        this.uniqueID = unID;
     }
+
 
 }
