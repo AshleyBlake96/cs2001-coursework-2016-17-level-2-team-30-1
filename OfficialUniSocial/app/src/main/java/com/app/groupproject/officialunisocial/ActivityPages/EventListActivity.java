@@ -15,6 +15,7 @@ import com.app.groupproject.officialunisocial.EventData;
 import com.app.groupproject.officialunisocial.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 
 import java.util.ArrayList;
@@ -78,6 +79,13 @@ public class EventListActivity extends AppCompatActivity {
         Intent loginIntent = getIntent();
         userInfo = (UserData) loginIntent.getExtras().get("userInfo");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(user != null) navEmail.setText(user.getEmail());
+
+        Picasso.with(this).load(userInfo.getImageref()).into(navProfileImage);
+        navUsername.setText(userInfo.getUsername());
+
+
 
     }
 }
