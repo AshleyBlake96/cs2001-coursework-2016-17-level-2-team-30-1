@@ -13,17 +13,17 @@
     tools:context="com.app.groupproject.officialunisocial.ActivityPages.CreateEventActivity">
 
      <ImageView
-         android:id="@+id/imagebox"
+         android:id="@+id/imageview_id"
          android:layout_width="190dp"
          android:layout_height="160dp"
          android:layout_marginBottom="10dp"
          android:background="@android:drawable/picture_frame"/>
 
      <Button
-         android:id="@+id/BrowseImage_button"
+         android:id="@+id/BrowseImage_button_id"
          android:layout_width="150dp"
          android:layout_height="100dp"
-         android:layout_toEndOf="@id/imagebox"
+         android:layout_toEndOf="@id/imageview_id"
          android:layout_marginTop="20dp"
          android:layout_marginBottom="60dp"
          android:layout_marginStart="10dp"
@@ -36,13 +36,13 @@
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imagebox"
+        android:layout_below="@id/imageview_id"
         android:text="Title:"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Title_field"
+        android:id="@+id/Title_field_id"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_below="@id/Title"
@@ -54,13 +54,13 @@
         android:id="@+id/Host"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Title_field"
+        android:layout_below="@+id/Title_field_id"
         android:text="Host:"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Host_field"
+        android:id="@+id/Host_field_id"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_below="@+id/Host"
@@ -73,11 +73,11 @@
         android:layout_height="wrap_content"
         android:text="Time:"
         android:textStyle="bold"
-        android:layout_below="@+id/Host_field"
+        android:layout_below="@+id/Host_field_id"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Time_field"
+        android:id="@+id/Time_field_id"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_below="@id/Time"
@@ -91,11 +91,11 @@
         android:layout_height="wrap_content"
         android:text="Date:"
         android:textStyle="bold"
-        android:layout_below="@+id/Time_field"
+        android:layout_below="@+id/Time_field_id"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Date_field"
+        android:id="@+id/Date_field_id"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_below="@id/Date"
@@ -109,11 +109,11 @@
         android:layout_height="wrap_content"
         android:text="Location:"
         android:textStyle="bold"
-        android:layout_below="@+id/Date_field"
+        android:layout_below="@+id/Date_field_id"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Location_field"
+        android:id="@+id/Location_field_id"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_below="@id/Location"
@@ -126,11 +126,11 @@
         android:layout_height="wrap_content"
         android:text="Description:"
         android:textStyle="bold"
-        android:layout_below="@+id/Location_field"
+        android:layout_below="@+id/Location_field_id"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Description_field"
+        android:id="@+id/Description_field_id"
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:layout_below="@id/Description"
@@ -144,11 +144,11 @@
         android:layout_height="wrap_content"
         android:text="Number of Students:"
         android:textStyle="bold"
-        android:layout_below="@+id/Description_field"
+        android:layout_below="@+id/Description_field_id"
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/No_of_students_field"
+        android:id="@+id/No_of_students_field_id"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_below="@id/No_of_Students"
@@ -159,7 +159,7 @@
         android:id="@+id/Submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/No_of_students_field"
+        android:layout_below="@id/No_of_students_field_id"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:text="Submit" />
