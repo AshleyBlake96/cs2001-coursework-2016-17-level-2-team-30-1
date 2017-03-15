@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText[] textField = new EditText[8];
     private static final int PICK_IMAGE = 11;
     private String STRdownloadURI;
+    private boolean fieldEmpty = false;
 
 
 
@@ -126,6 +128,18 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void register() {
+        for (EditText aTextField : textField) {
+
+            fieldEmpty = TextUtils.isEmpty(aTextField.getText().toString()) || profileImg == null;
+        }
+
+        if(fieldEmpty) {
+            Toast.makeText(RegisterActivity.this, "Fill in All the Details", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+        }
+
 
     }
 
