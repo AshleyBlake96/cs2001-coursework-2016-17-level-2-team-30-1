@@ -7,6 +7,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,8 +19,15 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.app.groupproject.officialunisocial.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -30,6 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText[] textField = new EditText[8];
     private static final int PICK_IMAGE = 11;
     private String STRdownloadURI;
+    private boolean fieldEmpty = false;
 
 
 
@@ -107,6 +116,13 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register();
+            }
+        });
+
     }
 
     private void openGallery() {
@@ -114,6 +130,72 @@ public class RegisterActivity extends AppCompatActivity {
         startActivityForResult(gallery, PICK_IMAGE);
     }
 
+    private void register() {
+        for (EditText aTextField : textField) {
+
+            fieldEmpty = TextUtils.isEmpty(aTextField.getText().toString()) || profileImg == null;
+        }
+
+        if(fieldEmpty) {
+            Toast.makeText(RegisterActivity.this, "Fill in All the Details", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+            String strEmail = SCMethods.textToString(textField[2]);
+            String strPassword = SCMethods.textToString(textField[3]);
+            String strRePassword = SCMethods.textToString(textField[4]);
+
+            if(!strPassword.equals(strRePassword)){
+                Toast.makeText(RegisterActivity.this, "Password Doesn't Match", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                fAuth.createUserWithEmailAndPassword(strEmail,strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isComplete()) {
+                            registerData.setUniqueID(fAuth.getCurrentUser().getUid());
+                            Toast.makeText(RegisterActivity.this, "SUCCESSFUL", Toast.LENGTH_SHORT).show();
+
+
+                            registerData.setFullname(SCMethods.textToString(textField[0]));
+                            registerData.setUsername(SCMethods.textToString(textField[1]));
+                            registerData.setAge(SCMethods.textToString(textField[5]));
+                            registerData.setUniversity(SCMethods.textToString(textField[6]));
+                            registerData.setNumber(SCMethods.textToString(textField[7]));
+                            registerData.setImageref(STRdownloadURI);
+
+
+
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"uniqueID",registerData.getUniqueID());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"username",registerData.getUsername());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"fullname",registerData.getFullname());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"age",registerData.getAge());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"gender",registerData.getGender());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"number",registerData.getNumber());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"university",registerData.getUniversity());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"imageref",registerData.getImageref());
+
+                            FirebaseAuth.getInstance().signOut();
+                            Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                            //push through register data?
+                            startActivity(intent);
+                            finish();
+
+
+
+                        }
+                        else {
+                            Toast.makeText(RegisterActivity.this, "UNSUCCESSFUL", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+            }
+        }
+
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
