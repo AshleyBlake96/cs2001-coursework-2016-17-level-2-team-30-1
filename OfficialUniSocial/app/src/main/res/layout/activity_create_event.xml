@@ -162,7 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/No_of_students_field_id"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:text="@string/Submit" />
   </RelativeLayout>
  </ScrollView>
