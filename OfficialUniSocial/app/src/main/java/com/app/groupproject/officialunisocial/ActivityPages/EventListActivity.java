@@ -5,9 +5,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.app.groupproject.officialunisocial.EventData;
 import com.app.groupproject.officialunisocial.R;
+
 
 import java.util.ArrayList;
 
@@ -33,6 +35,10 @@ public class EventListActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navView = (NavigationView) findViewById(R.id.nav_view_id);
+        View headerView = navView.getHeaderView(0);
+
 
 
     }
