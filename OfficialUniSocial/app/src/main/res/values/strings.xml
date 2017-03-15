@@ -30,4 +30,12 @@
     <string name="Submit">Submit</string>
     <string name="TimeFormatHint">HH:MM</string>
     <string name="DateFormatHint">DD.MM.YY</string>
+
+    <string-array name="gender_array">
+        <item>Select your gender</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+
 </resources>
