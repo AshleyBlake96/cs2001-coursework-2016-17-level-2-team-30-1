@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">UniSocial</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- String related to Creat Event-->
+    <string name="Title">Title:</string>
+    <string name="Browse_Image">Browse Image</string>
+    <string name="Upload_Image">Upload Image</string>
+    <string name="Host">Host:</string>
+    <string name="Time">Time:</string>
+    <string name="Date">Date:</string>
+    <string name="Location">Location:</string>
+    <string name="Description">Description:</string>
+    <string name="No_of_students">Number of Students:</string>
+    <string name="Submit">Submit</string>
+    <string name="TimeFormatHint">HH:MM</string>
+    <string name="DateFormatHint">DD.MM.YY</string>
 </resources>
