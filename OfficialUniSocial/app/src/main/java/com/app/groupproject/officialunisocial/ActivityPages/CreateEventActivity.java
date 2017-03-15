@@ -73,6 +73,18 @@ public class CreateEventActivity extends AppCompatActivity {
                     Toast.makeText(CreateEventActivity.this, "Fill in all details", Toast.LENGTH_SHORT).show();
                 } else {
 
+                    DatabaseReference titleRef = database.getReference("Events/").push();
+
+                    //This makes the child of the event and its value for example "Location = Uxbridge"
+                    addChildAndValue(titleRef, "title", textToString(eventDetails[0]));
+                    addChildAndValue(titleRef, "description", textToString(eventDetails[1]));
+                    addChildAndValue(titleRef, "host", textToString(eventDetails[2]));
+                    addChildAndValue(titleRef, "location", textToString(eventDetails[3]));
+                    addChildAndValue(titleRef, "noStudents", textToString(eventDetails[4]));
+                    addChildAndValue(titleRef, "date", textToString(eventDetails[5]));
+                    addChildAndValue(titleRef, "time", textToString(eventDetails[6]));
+                    addChildAndValue(titleRef, "image",STRdownloadURI);
+
                 }
 
 
