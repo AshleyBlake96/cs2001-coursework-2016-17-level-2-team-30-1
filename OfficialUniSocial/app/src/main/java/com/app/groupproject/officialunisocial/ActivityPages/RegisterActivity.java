@@ -20,6 +20,10 @@ import android.widget.Toast;
 import com.app.groupproject.officialunisocial.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -107,6 +111,13 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register();
+            }
+        });
+
     }
 
     private void openGallery() {
@@ -114,6 +125,9 @@ public class RegisterActivity extends AppCompatActivity {
         startActivityForResult(gallery, PICK_IMAGE);
     }
 
+    private void register() {
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
