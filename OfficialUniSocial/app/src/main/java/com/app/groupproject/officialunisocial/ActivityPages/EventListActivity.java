@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.app.groupproject.officialunisocial.EventData;
 import com.app.groupproject.officialunisocial.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 import java.util.ArrayList;
@@ -73,7 +75,9 @@ public class EventListActivity extends AppCompatActivity {
         TextView navUsername = (TextView) headerView.findViewById(R.id.nav_username_id);
         TextView navEmail = (TextView) headerView.findViewById(R.id.nav_email_id);
 
-
+        Intent loginIntent = getIntent();
+        userInfo = (UserData) loginIntent.getExtras().get("userInfo");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     }
 }
