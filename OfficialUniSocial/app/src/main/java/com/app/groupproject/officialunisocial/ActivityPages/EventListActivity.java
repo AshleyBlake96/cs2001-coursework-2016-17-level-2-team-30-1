@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +16,7 @@ import com.app.groupproject.officialunisocial.EventData;
 import com.app.groupproject.officialunisocial.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 
@@ -85,6 +87,10 @@ public class EventListActivity extends AppCompatActivity {
         Picasso.with(this).load(userInfo.getImageref()).into(navProfileImage);
         navUsername.setText(userInfo.getUsername());
 
+        //This gets the url for our database because it already knows what it is
+        //That's giving us the reference to the top level of our database
+        databaseRef = FirebaseDatabase.getInstance().getReference();
+        customList = (ListView) findViewById(R.id.list_id);
 
 
     }
