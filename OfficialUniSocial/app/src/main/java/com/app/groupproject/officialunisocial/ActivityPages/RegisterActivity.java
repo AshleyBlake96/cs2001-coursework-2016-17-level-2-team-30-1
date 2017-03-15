@@ -19,8 +19,11 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.app.groupproject.officialunisocial.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -144,6 +147,50 @@ public class RegisterActivity extends AppCompatActivity {
 
             if(!strPassword.equals(strRePassword)){
                 Toast.makeText(RegisterActivity.this, "Password Doesn't Match", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                fAuth.createUserWithEmailAndPassword(strEmail,strPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isComplete()) {
+                            registerData.setUniqueID(fAuth.getCurrentUser().getUid());
+                            Toast.makeText(RegisterActivity.this, "SUCCESSFUL", Toast.LENGTH_SHORT).show();
+
+
+                            registerData.setFullname(SCMethods.textToString(textField[0]));
+                            registerData.setUsername(SCMethods.textToString(textField[1]));
+                            registerData.setAge(SCMethods.textToString(textField[5]));
+                            registerData.setUniversity(SCMethods.textToString(textField[6]));
+                            registerData.setNumber(SCMethods.textToString(textField[7]));
+                            registerData.setImageref(STRdownloadURI);
+
+
+
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"uniqueID",registerData.getUniqueID());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"username",registerData.getUsername());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"fullname",registerData.getFullname());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"age",registerData.getAge());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"gender",registerData.getGender());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"number",registerData.getNumber());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"university",registerData.getUniversity());
+                            SCMethods.addChildAndValue(dbRef.child(registerData.getUniqueID()),"imageref",registerData.getImageref());
+
+                            FirebaseAuth.getInstance().signOut();
+                            Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                            //push through register data?
+                            startActivity(intent);
+                            finish();
+
+
+
+                        }
+                        else {
+                            Toast.makeText(RegisterActivity.this, "UNSUCCESSFUL", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
             }
         }
 
