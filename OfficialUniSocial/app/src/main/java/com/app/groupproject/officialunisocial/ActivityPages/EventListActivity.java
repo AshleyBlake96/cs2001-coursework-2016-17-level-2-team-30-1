@@ -119,6 +119,13 @@ public class EventListActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();
+
+                for(DataSnapshot child: children) {
+                    EventData event = child.getValue(EventData.class);
+                    eventList.add(event);
+                }
+
+
             }
 
             @Override
