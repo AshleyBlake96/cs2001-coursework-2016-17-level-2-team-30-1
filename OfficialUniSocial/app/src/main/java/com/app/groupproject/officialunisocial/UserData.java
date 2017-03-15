@@ -1,4 +1,4 @@
-package com.app.groupproject.officialunisocial.ActivityPages;
+package com.app.groupproject.officialunisocial;
 
 /**
  * Created by Jey on 15/03/2017.
