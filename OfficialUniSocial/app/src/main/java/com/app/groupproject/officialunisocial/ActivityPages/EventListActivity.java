@@ -118,14 +118,14 @@ public class EventListActivity extends AppCompatActivity {
         databaseRef.child("Events").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
+                Iterable<DataSnapshot> children = dataSnapshot.getChildren();
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        })
+        });
 
     }
 }
