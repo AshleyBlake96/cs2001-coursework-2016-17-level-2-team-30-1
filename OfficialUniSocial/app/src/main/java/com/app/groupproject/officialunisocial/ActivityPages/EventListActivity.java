@@ -6,8 +6,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -94,6 +96,20 @@ public class EventListActivity extends AppCompatActivity {
         DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
         customList = (ListView) findViewById(R.id.list_id);
 
+        customList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                pressedEvent = (EventData) parent.getItemAtPosition(position);
+
+                Intent eventInfo = new Intent(EventListActivity.this,EventInfoActivity.class);
+
+                Log.v("E_VALUE--------------",pressedEvent.getImage());
+                eventInfo.putExtra("eventData",pressedEvent);
+                eventInfo.putExtra("userInfo",userInfo);
+                startActivity(eventInfo);
+
+            }
+        });
 
     }
 }
