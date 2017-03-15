@@ -16,6 +16,7 @@ import com.app.groupproject.officialunisocial.EventData;
 import com.app.groupproject.officialunisocial.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
@@ -29,6 +30,7 @@ public class EventListActivity extends AppCompatActivity {
     private ArrayList<EventData> eventList = new ArrayList<>();
     private EventData pressedEvent;
     private UserData userInfo;
+    private ListView customList;
 
 
 
@@ -89,7 +91,7 @@ public class EventListActivity extends AppCompatActivity {
 
         //This gets the url for our database because it already knows what it is
         //That's giving us the reference to the top level of our database
-        databaseRef = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference();
         customList = (ListView) findViewById(R.id.list_id);
 
 
