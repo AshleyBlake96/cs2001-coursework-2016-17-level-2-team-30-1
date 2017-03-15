@@ -62,6 +62,18 @@ public class CreateEventActivity extends AppCompatActivity {
                 eventDetails[6] = (EditText) findViewById(R.id.Time_field_id);
                 ImageView image = (ImageView) findViewById(R.id.imageview_id);
 
+                //This for checking if there are any blanks
+                boolean blanks = true;
+
+                for (EditText eventDetail : eventDetails) {
+                    blanks = eventDetail.getText().toString().equals("") || image.getDrawable() == null;
+                }
+
+                if (blanks) {
+                    Toast.makeText(CreateEventActivity.this, "Fill in all details", Toast.LENGTH_SHORT).show();
+                } else {
+
+                }
 
 
             }
