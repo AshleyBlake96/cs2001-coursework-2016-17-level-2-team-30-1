@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -129,6 +131,41 @@ public class CreateEventActivity extends AppCompatActivity {
                     .start(this);
 
         }
+
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+            CropImage.ActivityResult result = CropImage.getActivityResult(data);
+
+            if (resultCode == RESULT_OK) {
+                Uri resultUri = result.getUri();
+
+                eventImage.setImageURI(resultUri);
+
+                StorageReference filePath = storageFef.child("Event Image").child(textToString(eventDetails[0]) + resultUri.getLastPathSegment());
+                filePath.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                        Uri downloadUri = taskSnapshot.getDownloadUrl();
+                        STRdownloadURI = downloadUri.toString();
+
+                        Log.d("D_Value---------------",STRdownloadURI);
+
+
+                        Toast.makeText(CreateEventActivity.this, "Upload Successful", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
+
+
+
+
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                Exception error = result.getError();
+            }
 
 
 
