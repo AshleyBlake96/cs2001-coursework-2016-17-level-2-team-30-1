@@ -1,11 +1,13 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.groupproject.officialunisocial.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -23,6 +25,9 @@ public class ProfileActivity extends AppCompatActivity {
         TextView uni = (TextView) findViewById(R.id.profilepage_universityInfo_id);
         TextView number = (TextView) findViewById(R.id.profilepage_numPhoneInfo_id);
 
+        UserData user = FirebaseAuth.getInstance().getCurrentUser();
+        Intent userIntent = getIntent();
+        userInfo = (UserData) userIntent.getExtras().get("userInfo");
 
     }
 }
