@@ -29,7 +29,7 @@
          android:layout_marginStart="10dp"
          android:textSize="20sp"
          android:onClick=""
-         android:text="Browse Image" />
+         android:text="@string/Browse_Image" />
 
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageview_id"
-        android:text="Title:"
+        android:text="@string/Title"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Title_field_id"
-        android:text="Host:"
+        android:text="@string/Host"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
@@ -71,7 +71,7 @@
         android:id="@+id/Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time:"
+        android:text="@string/Time"
         android:textStyle="bold"
         android:layout_below="@+id/Host_field_id"
         android:textSize="20sp"/>
@@ -81,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_below="@id/Time"
-        android:hint=" : "
+        android:hint="@string/TimeFormatHint"
         android:inputType="time"
         android:maxLength="5" />
 
@@ -89,7 +89,7 @@
         android:id="@+id/Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date:"
+        android:text="@string/Date"
         android:textStyle="bold"
         android:layout_below="@+id/Time_field_id"
         android:textSize="20sp"/>
@@ -99,7 +99,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_below="@id/Date"
-        android:hint="DD.MM.YY"
+        android:hint="@string/DateFormatHint"
         android:inputType="date"
         android:maxLength="8"/>
 
@@ -107,7 +107,7 @@
         android:id="@+id/Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location:"
+        android:text="@string/Location"
         android:textStyle="bold"
         android:layout_below="@+id/Date_field_id"
         android:textSize="20sp"/>
@@ -124,7 +124,7 @@
         android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Description:"
+        android:text="@string/Description"
         android:textStyle="bold"
         android:layout_below="@+id/Location_field_id"
         android:textSize="20sp"/>
@@ -143,7 +143,7 @@
         android:id="@+id/No_of_Students"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of Students:"
+        android:text="@string/No_of_students"
         android:textStyle="bold"
         android:layout_below="@+id/Description_field_id"
         android:textSize="20sp"/>
@@ -163,6 +163,6 @@
         android:layout_below="@id/No_of_students_field_id"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="Submit" />
+        android:text="@string/Submit" />
   </RelativeLayout>
  </ScrollView>
