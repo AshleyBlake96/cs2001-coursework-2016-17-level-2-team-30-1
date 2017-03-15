@@ -132,11 +132,12 @@
     <EditText
         android:id="@+id/Description_field_id"
         android:layout_width="320dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="140dp"
         android:layout_below="@id/Description"
-        android:layout_marginTop="24dp"
         android:inputType="textMultiLine"
-        android:maxLength="30"/>
+        android:scrollbars="vertical"
+        android:gravity="top|start"/>
 
     <TextView
         android:id="@+id/No_of_Students"
