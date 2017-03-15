@@ -1,8 +1,9 @@
 package com.app.groupproject.officialunisocial;
 
 
+import java.io.Serializable;
 
-public class EventData {
+public class EventData implements Serializable{
 
     private String image, title, description, host, date, time, location, noStudents;
 
