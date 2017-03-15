@@ -1,12 +1,10 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
-import java.io.Serializable;
-
 /**
  * Created by Jey on 15/03/2017.
  */
 
-public class UserData implements Serializable{
+public class UserData {
 
     private String uniqueID,university, number, imageref, fullname, gender, age, username;
 
