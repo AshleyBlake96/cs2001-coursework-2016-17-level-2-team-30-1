@@ -125,6 +125,9 @@ public class EventListActivity extends AppCompatActivity {
                     eventList.add(event);
                 }
 
+                CustomAdapter adapter = new CustomAdapter(EventListActivity.this,eventList);
+                customList.setAdapter(adapter);
+
 
             }
 
