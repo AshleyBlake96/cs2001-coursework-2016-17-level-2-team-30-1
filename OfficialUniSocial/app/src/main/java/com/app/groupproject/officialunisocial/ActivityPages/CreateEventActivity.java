@@ -1,6 +1,8 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,9 @@ import android.widget.Toast;
 import com.app.groupproject.officialunisocial.R;
 
 public class CreateEventActivity extends AppCompatActivity {
+
+    private static final int PICK_IMAGE = 10;
+
 
     private EditText[] eventDetails = new EditText[7];
     public ImageView eventImage;
@@ -105,6 +110,30 @@ public class CreateEventActivity extends AppCompatActivity {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
+            //gets Uri of the chosen image
+            Uri imageFileUri = data.getData();
+
+            CropImage.activity(imageFileUri)
+                    .setGuidelines(CropImageView.Guidelines.OFF)
+                    .setFixAspectRatio(true)
+                    .setAspectRatio(1,1)
+                    .setActivityTitle("Crop Event Image")
+                    .setBackgroundColor(Color.parseColor("#86FF0004"))
+                    .setBorderCornerColor(Color.WHITE)
+                    .setBorderLineColor(Color.parseColor("#0191e4"))
+                    .start(this);
+
+        }
+
+
+
+    }
+
 
 
 }
