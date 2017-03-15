@@ -1,6 +1,9 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
 
 import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
 import com.app.groupproject.officialunisocial.EventData;
 
@@ -10,7 +13,7 @@ import java.util.ArrayList;
  * Created by Jey on 15/03/2017.
  */
 
-public class CustomAdapter {
+public class CustomAdapter extends BaseAdapter {
 
     private Context context;
     private ArrayList<EventData> eventList;
@@ -20,6 +23,25 @@ public class CustomAdapter {
         this.eventList = ed;
     }
 
+    @Override
+    public int getCount() {
+        return eventList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return eventList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        return null;
+    }
 
 
 }
