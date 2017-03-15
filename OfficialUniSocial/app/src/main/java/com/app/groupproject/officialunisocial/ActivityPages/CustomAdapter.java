@@ -44,7 +44,9 @@ public class CustomAdapter extends BaseAdapter {
     //This controls how the strings that were passed in are laid out
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
+        //inflate = prepare or get ready for rendering
+        //context = background information
+        //this is equal to one custom row(view)
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.custom_event_row, parent, false);
         }
