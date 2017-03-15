@@ -84,9 +84,6 @@ public class EventData {
         return noStudents;
     }
 
-    public void setNoStudents(String noStudents) {
-        this.noStudents = noStudents;
-    }
 
 
 }
