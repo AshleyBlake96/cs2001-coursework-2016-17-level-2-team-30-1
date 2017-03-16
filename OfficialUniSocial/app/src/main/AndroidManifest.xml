@@ -25,6 +25,7 @@
         <activity android:name=".ActivityPages.EditProfileActivity" />
         <activity android:name=".ActivityPages.CreateEventActivity" />
         <activity android:name=".ActivityPages.ChatroomActivity"></activity>
+        <activity android:name=".ActivityPages.SocialWallActivity"></activity>
 
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
