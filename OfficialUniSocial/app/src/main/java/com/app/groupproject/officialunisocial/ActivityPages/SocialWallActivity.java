@@ -53,6 +53,11 @@ public class SocialWallActivity extends AppCompatActivity{
             }
         });
 
+        mUserWall = (EditText) findViewById(R.id.social_wall_users_name_id);
+
+        addWall.setOnClickListener(new View.OnClickListener() {
+            @Override
+
         });
     }
 }
