@@ -147,11 +147,29 @@
                 android:layout_margin="1sp"
                 android:hint="Enter to your wall..."
                 />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dad8d8"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Wall"
+                android:textColor="@color/black"
+                android:id="@+id/email_id"
+                android:textSize="13sp"
+                android:layout_marginTop="15sp" />
 
-
-
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wall_view"
+                android:textColor="@color/black"
+                android:text=""
+                android:layout_margin="4sp"
+                android:textSize="19sp"
+                />
 
 
         </LinearLayout>
