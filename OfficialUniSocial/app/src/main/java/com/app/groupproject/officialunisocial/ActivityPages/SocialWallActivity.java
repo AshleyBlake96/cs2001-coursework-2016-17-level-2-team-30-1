@@ -30,6 +30,28 @@ public class SocialWallActivity extends AppCompatActivity{
     private TextView mUserWall;
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.social_wall);
+
+        TextView social_wall = (TextView) findViewById(R.id.wall_view);
+
+        addWall = (Button) findViewById(R.id.AddWall);
+        mDatabase = FirebaseDatabase.getInstance().getReference().child(" ");
+        mWallView = (TextView) findViewById(R.id.wall_view);
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                String wall = dataSnapshot.getValue().toString();
+                mWallView.setText("" + wall);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         });
     }
