@@ -130,9 +130,23 @@
             android:padding="10dp"
             android:background="@drawable/backrec">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:id="@+id/nameInfo_id"
+                android:textSize="13sp"/>
 
-
-
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_wall_users_name_id"
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_margin="1sp"
+                android:hint="Enter to your wall..."
+                />
 
 
 
