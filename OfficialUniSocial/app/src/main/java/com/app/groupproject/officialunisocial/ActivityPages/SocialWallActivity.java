@@ -57,7 +57,18 @@ public class SocialWallActivity extends AppCompatActivity{
 
         addWall.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View v) {
 
+                // Create Child in root object
+                // assign a few values to child
+                String name = mUserWall.getText().toString().trim();
+                mDatabase.child("").setValue(name).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                    }
+                });
+            }
         });
     }
 }
