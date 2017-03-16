@@ -111,9 +111,24 @@
         android:textAllCaps="false"
         />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/profile_scrollView_id"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/profilepage_username_id"
+        android:layout_centerHorizontal="true">
 
-
-
+        <LinearLayout
+            android:id="@+id/mainLinear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:elevation="3dp"
+            android:padding="10dp"
+            android:background="@drawable/backrec">
 
 
 
