@@ -65,7 +65,12 @@ public class SocialWallActivity extends AppCompatActivity{
                 mDatabase.child("").setValue(name).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-
+                        if(task.isSuccessful()){
+                            Toast.makeText(SocialWallActivity.this, "Updated...", Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            Toast.makeText(SocialWallActivity.this, "Error", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
             }
