@@ -7,7 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ActivityPages.SocialWallActivity">
 
-
+    <Button android:id="@+id/back_id"
+        android:background="@drawable/backnew"
+        android:layout_margin="12dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:elevation="3dp"
+        />
 
 
 
