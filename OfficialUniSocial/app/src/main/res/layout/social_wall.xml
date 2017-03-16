@@ -14,7 +14,17 @@
         android:layout_height="35dp"
         android:elevation="3dp"
         />
-
+    <Button android:id="@+id/social_wall_edit_id"
+        android:theme="@style/AppTheme.Button"
+        android:layout_width="80sp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textSize="15sp"
+        android:text="Add +"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"
+        />
 
 
 
