@@ -30,50 +30,7 @@ public class SocialWallActivity extends AppCompatActivity{
     private TextView mUserWall;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.social_wall);
 
-        TextView social_wall = (TextView) findViewById(R.id.wall_view);
-
-        addWall = (Button) findViewById(R.id.AddWall);
-        mDatabase = FirebaseDatabase.getInstance().getReference().child(" ");
-        mWallView = (TextView) findViewById(R.id.wall_view);
-        mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                String wall = dataSnapshot.getValue().toString();
-                mWallView.setText("" + wall);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        mUserWall = (EditText) findViewById(R.id.social_wall_users_name_id);
-
-        addWall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                // Create Child in root object
-                // assign a few values to child
-                String name = mUserWall.getText().toString().trim();
-                mDatabase.child("").setValue(name).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(SocialWallActivity.this, "Updated...", Toast.LENGTH_LONG).show();
-                        }
-                        else {
-                            Toast.makeText(SocialWallActivity.this, "Error", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-            }
         });
     }
 }
