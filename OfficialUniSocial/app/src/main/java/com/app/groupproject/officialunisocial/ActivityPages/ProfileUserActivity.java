@@ -24,5 +24,9 @@ public class ProfileUserActivity extends AppCompatActivity {
         TextView age = (TextView) findViewById(R.id.profilepage_ageInfo_id);
         TextView uni = (TextView) findViewById(R.id.profilepage_universityInfo_id);
         TextView number = (TextView) findViewById(R.id.profilepage_numPhoneInfo_id);
+        
+        UserData user = FirebaseAuth.getInstance().getCurrentUser();
+        Intent userIntent = getIntent();
+        userInfo = (UserData) userIntent.getExtras().get("userInfo");
 
 }
