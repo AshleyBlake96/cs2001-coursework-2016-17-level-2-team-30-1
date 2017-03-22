@@ -23,7 +23,6 @@
         <activity android:name=".ActivityPages.EventListActivity" />
         <activity android:name=".ActivityPages.EventInfoActivity" />
         <activity android:name=".ActivityPages.EditProfileActivity" />
-        <activity android:name=".ActivityPages.CreateEventActivity" />
         <activity android:name=".ActivityPages.ChatroomActivity"></activity>
         <activity android:name=".ActivityPages.SocialWallActivity"></activity>
 
