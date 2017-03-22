@@ -1,5 +1,4 @@
 package com.app.groupproject.officialunisocial.ActivityPages;
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,13 +10,11 @@ import android.widget.TextView;
 import com.app.groupproject.officialunisocial.R;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class ProfileActivity extends AppCompatActivity {
-
+public class ProfileUserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
         ImageView profileImage = (ImageView) findViewById(R.id.profilepage_image_id);
         TextView username = (TextView) findViewById(R.id.profilepage_username_id);
         TextView name = (TextView) findViewById(R.id.profilepage_users_name_id);
@@ -47,12 +44,10 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent loginIntent = new Intent(ProfileActivity.this,LoginActivity.class);
+                Intent loginIntent = new Intent(ProfileUserActivity.this,LoginActivity.class);
                 startActivity(loginIntent);
                 finish();
             }
         });
-
-
     }
 }
