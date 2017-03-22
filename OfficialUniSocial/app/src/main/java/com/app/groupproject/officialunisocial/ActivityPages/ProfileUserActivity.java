@@ -38,4 +38,17 @@ public class ProfileUserActivity extends AppCompatActivity {
         age.setText(userInfo.getAge());
         uni.setText(userInfo.getUniversity());
         number.setText(userInfo.getNumber());
+
+        Button signOutBtn = (Button) findViewById(R.id.profilepage_signOut_id);
+
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent loginIntent = new Intent(ProfileUserActivity.this,LoginActivity.class);
+                startActivity(loginIntent);
+                finish();
+            }
+        });
+    }
 }
