@@ -5,7 +5,7 @@
     android:id="@+id/activity_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.app.groupproject.officialunisocial.ActivityPages.ProfileActivity">
+    tools:context="com.app.groupproject.officialunisocial.ActivityPages.ProfileUserActivity">
 
     <Button android:id="@+id/profilepage_back_id"
         android:background="@drawable/backnew"

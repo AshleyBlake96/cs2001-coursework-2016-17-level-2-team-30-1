@@ -52,7 +52,5 @@ public class ProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
 }
