@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityPages.RegisterActivity" />
-        <activity android:name=".ActivityPages.ProfileActivity" />
         <activity android:name=".ActivityPages.NotificationActivity" />
         <activity android:name=".ActivityPages.ManageEventActivity" />
         <activity android:name=".ActivityPages.ForgottenDetailsActivity" />

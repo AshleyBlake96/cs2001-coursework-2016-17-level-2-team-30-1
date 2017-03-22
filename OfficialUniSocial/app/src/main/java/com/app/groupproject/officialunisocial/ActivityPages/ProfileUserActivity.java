@@ -15,7 +15,6 @@ public class ProfileUserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
         ImageView profileImage = (ImageView) findViewById(R.id.profilepage_image_id);
         TextView username = (TextView) findViewById(R.id.profilepage_username_id);
         TextView name = (TextView) findViewById(R.id.profilepage_users_name_id);
