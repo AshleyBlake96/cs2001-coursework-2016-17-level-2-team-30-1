@@ -1,68 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_create_event"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.app.groupproject.officialunisocial.ActivityPages.CreateEventActivity">
 
+     <ImageView
+         android:id="@+id/imageview_id"
+         android:layout_width="190dp"
+         android:layout_height="160dp"
+         android:layout_marginBottom="10dp"
+         android:background="@android:drawable/picture_frame"/>
+
+     <Button
+         android:id="@+id/BrowseImage_button_id"
+         android:layout_width="150dp"
+         android:layout_height="100dp"
+         android:layout_toEndOf="@id/imageview_id"
+         android:layout_marginTop="20dp"
+         android:layout_marginBottom="60dp"
+         android:layout_marginStart="10dp"
+         android:textSize="20sp"
+         android:onClick=""
+         android:text="@string/Browse_Image" />
+
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:text="Title:"
+        android:layout_below="@id/imageview_id"
+        android:text="@string/Title"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/Title_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:id="@+id/Title_field_id"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/Title"
         android:inputType="textCapSentences"
         android:maxLength="30"/>
+
 
     <TextView
         android:id="@+id/Host"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:layout_below="@+id/Title"
-        android:text="Host:"
+        android:layout_below="@+id/Title_field_id"
+        android:text="@string/Host"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/Title"
+        android:id="@+id/Host_field_id"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Host"
         android:inputType="textCapSentences"
-        android:maxLength="25"/>
+        android:maxLength="30"/>
 
     <TextView
         android:id="@+id/Time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:text="Time:"
+        android:text="@string/Time"
         android:textStyle="bold"
-        android:layout_below="@+id/Host"
-        android:textSize="20dp"/>
+        android:layout_below="@+id/Host_field_id"
+        android:textSize="20sp"/>
 
     <EditText
+        android:id="@+id/Time_field_id"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/Host"
-        android:hint=" : "
+        android:layout_height="40dp"
+        android:layout_below="@id/Time"
+        android:hint="@string/TimeFormatHint"
         android:inputType="time"
         android:maxLength="5" />
 
@@ -70,19 +89,17 @@
         android:id="@+id/Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:text="Date:"
+        android:text="@string/Date"
         android:textStyle="bold"
-        android:layout_below="@+id/Time"
-        android:textSize="20dp"/>
+        android:layout_below="@+id/Time_field_id"
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/Time"
-        android:hint="DD.MM.YY"
+        android:id="@+id/Date_field_id"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/Date"
+        android:hint="@string/DateFormatHint"
         android:inputType="date"
         android:maxLength="8"/>
 
@@ -90,56 +107,52 @@
         android:id="@+id/Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="25dp"
-        android:text="Location:"
+        android:text="@string/Location"
         android:textStyle="bold"
-        android:layout_below="@+id/Date"
-        android:textSize="20dp"/>
+        android:layout_below="@+id/Date_field_id"
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/Date"
+        android:id="@+id/Location_field_id"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/Location"
         android:inputType="textCapSentences"
-        android:maxLength="20"/>
+        android:maxLength="30"/>
 
     <TextView
         android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="60dp"
-        android:text="Description:"
+        android:text="@string/Description"
         android:textStyle="bold"
-        android:layout_below="@+id/Location"
-        android:textSize="20dp"/>
+        android:layout_below="@+id/Location_field_id"
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:id="@+id/Description_field_id"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/Location"
-        android:layout_marginTop="24dp"
+        android:maxHeight="140dp"
+        android:layout_below="@id/Description"
         android:inputType="textMultiLine"
-        android:maxLength="60"/>
+        android:scrollbars="vertical"
+        android:gravity="top|start"/>
 
     <TextView
         android:id="@+id/No_of_Students"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Number of Students:"
+        android:text="@string/No_of_students"
         android:textStyle="bold"
-        android:layout_below="@+id/Description"
-        android:textSize="20dp"/>
+        android:layout_below="@+id/Description_field_id"
+        android:textSize="20sp"/>
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/Description"
+        android:id="@+id/No_of_students_field_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/No_of_Students"
         android:inputType="number"
         android:maxLength="3"/>
 
@@ -147,7 +160,9 @@
         android:id="@+id/Submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/No_of_students_field_id"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Submit" />
-</RelativeLayout>
+        android:layout_alignParentEnd="true"
+        android:text="@string/Submit" />
+  </RelativeLayout>
+ </ScrollView>

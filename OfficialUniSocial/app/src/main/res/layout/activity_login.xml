@@ -1,124 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.app.groupproject.officialunisocial.ActivityPages.LoginActivity">
-    <View
-        android:layout_width="400dp"
-        android:layout_height="650dp"
-        android:background="#ffffff"
-        android:id="@+id/Background_textView_id"/>
 
-    <View
-
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/Rectangle"/>
-
-    <View
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="350dp"
-        android:background="@drawable/Rectangle"/>
-    <TextView
-        android:layout_width="310dp"
+<!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Username"
-        android:textSize="22sp"
-        android:layout_marginTop="255dp"
-        android:layout_marginLeft="22dp"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:id="@+id/Username_text_id"/>
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
 
-    <EditText
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Username_text_id"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="10dp"
-        android:hint="Ashley"
-        android:textAlignment="center"
-        android:inputType="text"
-        android:textSize="22sp"
-        android:background="@android:color/transparent"
-        android:textColorHint="#000000"
-        android:textColor="#000000"
-        android:id="@+id/Username_editText_id"/>
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Password"
-        android:textSize="22sp"
-        android:layout_below="@id/Username_editText_id"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="22dp"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:id="@+id/Password_text_id"/>
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Password_text_id"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:background="@android:color/transparent"
-        android:inputType="text"
-        android:textSize="22sp"
-        android:password="true"
-        android:hint="********"
-        android:textColorHint="#000000"
-        android:textColor="#000000"
-        android:id="@+id/Password_editText_id" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Register"
-        android:background="@drawable/rectangle"
-        android:layout_marginLeft="8dp"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:layout_marginTop="413dp"
-        android:textAllCaps="false"
-        android:id="@+id/Register_button_id"/>
+                <AutoCompleteTextView
+                    android:id="@+id/emailentered_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true" />
 
-    <Button
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:text="@string/signIn"
-        android:layout_toRightOf="@id/Register_button_id"
-        android:layout_marginLeft="4dp"
-        android:background="@drawable/rectangle"
-        android:textSize="20sp"
-        android:textAllCaps="false"
-        android:textAlignment="center"
-        android:layout_marginTop="413dp"
-        android:id="@+id/signIn_button_id"/>
+            </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:text="@string/ForgottenDetails"
-        android:layout_below="@id/Register_button_id"
-        android:id="@+id/ForgottenPassword_button_id"
-        android:background="@drawable/rectangle"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textAllCaps="false"/>
-</RelativeLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/passwordentered_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/sign_in_button_id"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Sign In"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/register_button_id"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Register"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
